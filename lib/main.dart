@@ -1,4 +1,5 @@
 import 'package:app_oit/dbHelper/mongodb.dart';
+import 'package:app_oit/delete.dart';
 import 'package:app_oit/display.dart';
 import 'package:app_oit/insert.dart';
 import 'package:app_oit/update.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
        
         primarySwatch: Colors.blue,
       ),
-      home: MongoDbUpdate(),
+      home: MongoDbDelete(),
     );
   }
 
