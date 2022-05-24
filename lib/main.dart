@@ -1,7 +1,8 @@
+
+import 'package:app_oit/color.dart';
 import 'package:app_oit/dbHelper/mongodb.dart';
-import 'package:app_oit/delete.dart';
-import 'package:app_oit/display.dart';
-import 'package:app_oit/insert.dart';
+import 'package:app_oit/menu.dart';
+import 'package:app_oit/signin.dart';
 import 'package:app_oit/update.dart';
 import 'package:flutter/material.dart';
 
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
        
         primarySwatch: Colors.blue,
       ),
-      home: MongoDbDelete(),
+      home: Login(),
     );
   }
 
@@ -41,6 +42,8 @@ class MyHomePage extends StatefulWidget {
   }
   
   class _MyHomePageState extends State<MyHomePage> {
+  
+
     @override
     Widget build(BuildContext context) {
       return Scaffold(body: SafeArea(child: Text("Heloo")));

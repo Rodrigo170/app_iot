@@ -42,19 +42,49 @@ class _MongoDBInsertState extends State<MongoDBInsert> {
               style: TextStyle(fontSize: 22),
             ),
             SizedBox(height: 50,),
-            TextField(
-              controller: labelColor,
-              decoration: InputDecoration(labelText: "Color"),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0), //interno
+              margin: const EdgeInsets.symmetric(horizontal: 30.0),
+              decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(color: Colors.blue, width: 3.0)
+              ),
+              child: TextField(
+                controller: labelColor,
+                decoration: InputDecoration(labelText: "Color",
+                ),
+              ),
             ),
-            TextField(
-              controller: descColor,
-              decoration: InputDecoration(labelText: "Descripción"),
+            SizedBox(height: 30,),
+
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0), //interno
+              margin: const EdgeInsets.symmetric(horizontal: 30.0),
+              decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(color: Colors.blue, width: 3.0)
+              ),
+              child: TextField(
+                controller: descColor,
+                decoration: InputDecoration(labelText: "Descripción"),
+              ),
             ),
-            TextField(
-              controller: urlColor,
-              minLines: 3,
-              maxLines: 5,
-              decoration: InputDecoration(labelText: "URL Imagen"),
+
+            SizedBox(height: 30,),
+
+            Container(
+             padding: const EdgeInsets.symmetric(horizontal: 20.0), //interno
+              margin: const EdgeInsets.symmetric(horizontal: 30.0),
+              decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(color: Colors.blue, width: 3.0)
+              ),
+              child: TextField(
+                controller: urlColor,
+                minLines: 3,
+                maxLines: 5,
+                decoration: InputDecoration(labelText: "URL Imagen"),
+              ),
             ),
           const  SizedBox(height: 50,),
             ElevatedButton(

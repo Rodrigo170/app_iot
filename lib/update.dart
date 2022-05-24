@@ -3,6 +3,7 @@
 import 'package:app_oit/MongoDBModel.dart';
 import 'package:app_oit/dbHelper/mongodb.dart';
 import 'package:app_oit/insert.dart';
+import 'package:app_oit/menu.dart';
 import 'package:flutter/material.dart';
 
 class MongoDbUpdate extends StatefulWidget {
@@ -17,6 +18,12 @@ class _MongoDbUpdateState extends State<MongoDbUpdate> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Menu(),
+      appBar: AppBar(
+        elevation: 0.0,
+        backgroundColor: Color(0xff251F34),
+        title: const Text('Colores Registrados'),
+      ),
       body: SafeArea(
         child:
             FutureBuilder(
@@ -54,12 +61,12 @@ class _MongoDbUpdateState extends State<MongoDbUpdate> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text("${data.id.$oid}"),
+                //Text("${data.id.$oid}"),
                 SizedBox(height: 5,),
-                Text("${data.color}"),
-                SizedBox(height: 5,),
-                Text("${data.descripcion}"),
-                SizedBox(height: 5,),
+                Text("${data.descripcion}",
+                style: TextStyle(fontSize: 20.0)
+                ),
+                SizedBox(height: 10,),
 
                 Image.network("${data.imagen}", width: 45)
               ],
